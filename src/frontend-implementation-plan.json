@@ -1,0 +1,291 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Mookie’s at Mugford — Single-page café marketing site (frontend)",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a mobile-first single-page landing page using the provided business info exactly as written.",
+      "acceptanceCriteria": [
+        "The landing page renders as a single scrollable page with clearly separated sections.",
+        "All business info strings appear exactly as provided (including punctuation like “Open · Closes 3 PM” and “⭐ 4.9 (108 reviews)”).",
+        "Layout is responsive and readable on mobile, tablet, and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page layout and sections scaffold, ensuring all provided business info strings are rendered verbatim and the page is mobile-first responsive."
+        },
+        {
+          "path": "frontend/src/components/mookies/businessInfo.ts",
+          "operation": "create",
+          "description": "Add a single source-of-truth constants module containing the business name, address, phone, price range, hours, service options, dog-friendly note, and rating/review count exactly as provided to prevent copy drift."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create the Hero section component that consumes the exact-string business info constants and renders them in a mobile-first layout."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/AboutSection.tsx",
+          "operation": "create",
+          "description": "Create the About section component with the required warm/casual story content and dog-friendly mention, using the exact required copy."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement the specified single-page section order and content, including menu highlight cards with photos, reviews, visit details with map embed, and footer with social icons.",
+      "acceptanceCriteria": [
+        "Each section exists with the required headings/copy and is reachable by scrolling.",
+        "Hero shows the rating near the headline area and includes both CTAs.",
+        "Menu highlight items are displayed as cards and each card includes an image.",
+        "Reviews section shows the three quotes exactly as provided and displays 108 review count.",
+        "Visit Us includes an interactive map embed and a clickable phone link using tel:(781) 990-3282.",
+        "Footer includes social icons styled consistently (links may be placeholders if no URLs are provided)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Compose the page in the exact required section order (Hero, About, Menu Highlights, Why People Love It, Reviews, Visit Us, Footer) and ensure each section is reachable by scroll with clear separation."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx",
+          "operation": "create",
+          "description": "Create Menu Highlights section with clean card layout and images for each required item; use shadcn-ui Card and Button components to provide polished cards/buttons. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/WhyPeopleLoveItSection.tsx",
+          "operation": "create",
+          "description": "Create a social-proof bullet section matching the requested tone and structure."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/ReviewsSection.tsx",
+          "operation": "create",
+          "description": "Create Reviews section showing a 5-star display, the three provided quotes exactly as provided, and the total review count 108."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/VisitUsSection.tsx",
+          "operation": "create",
+          "description": "Create Visit Us section including exact address, hours, tel link for (781) 990-3282, a 'Get Directions' button, and an interactive embedded map iframe."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/FooterSection.tsx",
+          "operation": "create",
+          "description": "Create footer with logo/name, address, phone, hours, and Instagram-vibe social icon links (placeholders if no URLs provided). Use shadcn-ui Button where appropriate for consistent icon-button styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/mookies/assets.ts",
+          "operation": "create",
+          "description": "Centralize references to generated static asset paths used by hero and menu cards to avoid typos and missing image errors."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Wire CTAs with smooth scrolling, directions link, and an Order Online modal/section with a call fallback.",
+      "acceptanceCriteria": [
+        "Clicking “View Menu” smoothly scrolls to the menu section.",
+        "Clicking “Get Directions” opens a new tab with directions for the exact address.",
+        "Clicking “Order Online” does not dead-end; it shows a modal/section with a clear next action (call link).",
+        "All interactive elements have accessible focus styles and keyboard support."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add section anchors/refs and wire smooth-scroll behavior for 'View Menu' and 'View Full Menu' without navigation away from the single page."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Wire Hero CTAs: 'View Menu' triggers smooth-scroll to the Menu Highlights section; 'Order Online' opens a user-triggered modal/section with a clickable tel:(781) 990-3282 fallback."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx",
+          "operation": "modify",
+          "description": "Wire 'View Full Menu' button to smooth-scroll to Menu Highlights and optionally expand an in-page full menu area (if implemented) without navigating away. Use shadcn-ui Button for consistent CTA styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/VisitUsSection.tsx",
+          "operation": "modify",
+          "description": "Implement 'Get Directions' to open a new tab pointing to a maps directions URL targeting the exact address “114 Washington St, Marblehead, MA 01945”, and ensure phone is a clickable tel link."
+        },
+        {
+          "path": "frontend/src/components/mookies/OrderOnlineDialog.tsx",
+          "operation": "create",
+          "description": "Add a user-triggered modal that explains online ordering is not available yet and provides a prominent tel:(781) 990-3282 call-to-order action; use shadcn-ui Dialog to ensure focus trapping and keyboard support. Verify the component's usage instructions before implementing."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a warm cozy modern café aesthetic with the specified palette, subtle animations, smooth scrolling, and clean sans-serif typography without clutter or automatic pop-ups.",
+      "acceptanceCriteria": [
+        "Visual styling matches the described palette and cozy café feel (neutrals + espresso/cream/muted green accents).",
+        "Animations are subtle (e.g., gentle fade/slide on scroll, hover elevation) and do not block interaction.",
+        "No modal dialogs appear automatically; the only modal allowed is user-triggered (e.g., Order Online).",
+        "Typography uses a clean sans-serif throughout with consistent spacing and hierarchy."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Define global styles for the warm neutral palette with espresso brown/cream/muted green accents, set clean sans-serif typography defaults, enable smooth scrolling, and establish consistent spacing and focus-visible styles."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme tokens to reflect the café palette (espresso/cream/muted green), subtle shadows, and any needed animation utilities to support a cozy modern aesthetic."
+        },
+        {
+          "path": "frontend/src/components/mookies/animations/useRevealOnScroll.ts",
+          "operation": "create",
+          "description": "Add a lightweight hook for subtle, non-blocking reveal-on-scroll animations (e.g., fade/slide) that respects user interaction and supports reduced motion preferences."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx",
+          "operation": "modify",
+          "description": "Apply subtle hover elevation/shadows and gentle reveal animations to cards and CTAs without introducing clutter."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add basic local SEO: title/description, Open Graph/Twitter meta tags, semantic headings, and LocalBusiness JSON-LD with the provided business details.",
+      "acceptanceCriteria": [
+        "The document has a relevant <title> and meta description containing “Mookie’s at Mugford” and “Marblehead, MA”.",
+        "Open Graph meta tags are present (title, description, image, url).",
+        "A JSON-LD script for a LocalBusiness (or CafeOrCoffeeShop) is included with the provided business fields.",
+        "Headings use a single H1 and logical H2/H3 structure for sections."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add/adjust meta description plus Open Graph and Twitter meta tags (title/description/image/url) for local SEO while keeping the correct page title for “Mookie’s at Mugford”."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Embed JSON-LD for LocalBusiness (or CafeOrCoffeeShop) including the exact provided name, address, phone, price range, hours, and ⭐ rating/review count."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Ensure semantic heading structure: a single H1 in the Hero and logical H2/H3 headings for subsequent sections in the required order."
+        },
+        {
+          "path": "frontend/src/components/mookies/assets.ts",
+          "operation": "modify",
+          "description": "Expose the hero image path for reuse in SEO meta tag image references to keep OG image consistent with the actual static asset."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Ensure performance and accessibility: optimized/lazy-loaded images, adequate contrast, alt text, and accessible keyboard behavior including modal focus management.",
+      "acceptanceCriteria": [
+        "All images have non-empty alt text appropriate to the visual content.",
+        "Below-the-fold images are lazy-loaded.",
+        "Largest hero image is compressed and sized appropriately for common viewports.",
+        "Keyboard navigation works for CTAs, links, and any modal; focus is trapped in modal while open and returns on close."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/mookies/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Render the hero image with appropriate responsive sizing hints and meaningful alt text, and ensure critical hero media is optimized for fast loading."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx",
+          "operation": "modify",
+          "description": "Ensure each menu card image has meaningful non-empty alt text and uses lazy-loading for below-the-fold images."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/FooterSection.tsx",
+          "operation": "modify",
+          "description": "Ensure social icon links have accessible names (e.g., aria-label) and visible focus styles for keyboard users."
+        },
+        {
+          "path": "frontend/src/components/mookies/OrderOnlineDialog.tsx",
+          "operation": "modify",
+          "description": "Ensure the modal supports keyboard interaction (Escape to close where appropriate), traps focus while open, and restores focus to the triggering CTA on close by relying on shadcn-ui Dialog accessibility behavior. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add/verify global focus-visible styles, ensure adequate color contrast across text/CTA states, and provide reduced-motion styling to keep animations accessible."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add and reference the required generated static images from frontend/public/assets/generated with the exact filenames; use them in hero and menu cards without backend calls.",
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated with the specified filenames.",
+        "Hero and menu cards render using these static assets without backend calls.",
+        "Build succeeds with correct asset paths and no missing image errors."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/mookies-hero.dim_2400x1350.png",
+          "operation": "create",
+          "description": "Add the generated hero image asset at the exact required path/filename for static serving."
+        },
+        {
+          "path": "frontend/public/assets/generated/mookies-logo.dim_1200x400.png",
+          "operation": "create",
+          "description": "Add the generated transparent wordmark logo asset at the exact required path/filename for static serving."
+        },
+        {
+          "path": "frontend/public/assets/generated/menu-avocado-toast.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated menu image asset at the exact required path/filename for static serving."
+        },
+        {
+          "path": "frontend/public/assets/generated/menu-cinnamon-roll.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated menu image asset at the exact required path/filename for static serving."
+        },
+        {
+          "path": "frontend/public/assets/generated/menu-pastries.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated menu image asset at the exact required path/filename for static serving."
+        },
+        {
+          "path": "frontend/public/assets/generated/menu-ham-egg-cheese.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated menu image asset at the exact required path/filename for static serving."
+        },
+        {
+          "path": "frontend/public/assets/generated/menu-egg-cheddar.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated menu image asset at the exact required path/filename for static serving."
+        },
+        {
+          "path": "frontend/public/assets/generated/menu-lattes-espresso.dim_1200x900.png",
+          "operation": "create",
+          "description": "Add the generated menu image asset at the exact required path/filename for static serving."
+        },
+        {
+          "path": "frontend/src/components/mookies/assets.ts",
+          "operation": "modify",
+          "description": "Reference all generated static assets using their exact workspace paths under frontend/public/assets/generated to ensure hero and menu cards render without backend calls."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/HeroSection.tsx",
+          "operation": "modify",
+          "description": "Wire the hero section to render frontend/public/assets/generated/mookies-hero.dim_2400x1350.png and frontend/public/assets/generated/mookies-logo.dim_1200x400.png as static assets."
+        },
+        {
+          "path": "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx",
+          "operation": "modify",
+          "description": "Wire each menu highlight card image to the corresponding generated static asset under frontend/public/assets/generated with the exact filenames."
+        }
+      ]
+    }
+  ]
+}

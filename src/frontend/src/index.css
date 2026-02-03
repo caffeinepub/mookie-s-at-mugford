@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        
+        /* Warm neutrals base */
+        --background: 0.98 0.01 60;
+        --foreground: 0.20 0.02 40;
+        
+        /* Card surfaces */
+        --card: 1 0 0;
+        --card-foreground: 0.20 0.02 40;
+        
+        /* Popover */
+        --popover: 1 0 0;
+        --popover-foreground: 0.20 0.02 40;
+        
+        /* Espresso brown primary */
+        --primary: 0.28 0.04 40;
+        --primary-foreground: 0.98 0.01 60;
+        
+        /* Cream secondary */
+        --secondary: 0.95 0.02 70;
+        --secondary-foreground: 0.28 0.04 40;
+        
+        /* Muted */
+        --muted: 0.93 0.02 65;
+        --muted-foreground: 0.50 0.02 40;
+        
+        /* Muted green accent */
+        --accent: 0.65 0.08 150;
+        --accent-foreground: 0.98 0.01 60;
+        
+        /* Destructive */
+        --destructive: 0.55 0.20 25;
+        --destructive-foreground: 0.98 0.01 60;
+        
+        /* Borders and inputs */
+        --border: 0.88 0.02 60;
+        --input: 0.88 0.02 60;
+        --ring: 0.65 0.08 150;
+        
+        /* Custom café colors */
+        --espresso: 0.28 0.04 40;
+        --espresso-dark: 0.22 0.04 35;
+        --espresso-light: 0.45 0.03 40;
+        --cream: 0.98 0.01 60;
+        --cream-light: 0.99 0.005 65;
+        --muted-green: 0.65 0.08 150;
+        --muted-green-light: 0.75 0.06 155;
+        
+        /* Charts */
+        --chart-1: 0.65 0.08 150;
+        --chart-2: 0.55 0.12 35;
+        --chart-3: 0.45 0.10 50;
+        --chart-4: 0.70 0.06 160;
+        --chart-5: 0.60 0.10 140;
+    }
+
+    .dark {
+        --background: 0.20 0.02 40;
+        --foreground: 0.98 0.01 60;
+        
+        --card: 0.25 0.02 40;
+        --card-foreground: 0.98 0.01 60;
+        
+        --popover: 0.22 0.02 40;
+        --popover-foreground: 0.98 0.01 60;
+        
+        --primary: 0.95 0.02 70;
+        --primary-foreground: 0.28 0.04 40;
+        
+        --secondary: 0.30 0.03 40;
+        --secondary-foreground: 0.98 0.01 60;
+        
+        --muted: 0.35 0.02 45;
+        --muted-foreground: 0.75 0.02 60;
+        
+        --accent: 0.65 0.08 150;
+        --accent-foreground: 0.98 0.01 60;
+        
+        --destructive: 0.60 0.18 25;
+        --destructive-foreground: 0.98 0.01 60;
+        
+        --border: 0.35 0.02 45;
+        --input: 0.35 0.02 45;
+        --ring: 0.65 0.08 150;
+        
+        /* Custom café colors for dark mode */
+        --espresso: 0.95 0.02 70;
+        --espresso-dark: 0.90 0.02 65;
+        --espresso-light: 0.75 0.02 60;
+        --cream: 0.28 0.04 40;
+        --cream-light: 0.35 0.03 45;
+        --muted-green: 0.70 0.08 155;
+        --muted-green-light: 0.75 0.06 160;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Focus visible styles for accessibility */
+    *:focus-visible {
+        @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+    }
+    
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+        }
+    }
+}
+
+@layer utilities {
+    .text-espresso {
+        color: oklch(var(--espresso));
+    }
+    
+    .text-espresso-dark {
+        color: oklch(var(--espresso-dark));
+    }
+    
+    .text-espresso-light {
+        color: oklch(var(--espresso-light));
+    }
+    
+    .text-cream {
+        color: oklch(var(--cream));
+    }
+    
+    .text-cream-light {
+        color: oklch(var(--cream-light));
+    }
+    
+    .text-muted-green {
+        color: oklch(var(--muted-green));
+    }
+    
+    .bg-espresso {
+        background-color: oklch(var(--espresso));
+    }
+    
+    .bg-espresso-dark {
+        background-color: oklch(var(--espresso-dark));
+    }
+    
+    .bg-cream {
+        background-color: oklch(var(--cream));
+    }
+    
+    .bg-muted-green {
+        background-color: oklch(var(--muted-green));
+    }
+    
+    .border-espresso {
+        border-color: oklch(var(--espresso));
+    }
+}

@@ -1,0 +1,155 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-mobile-first-single-page-marketing-website-for-the-coffee-shop-mookie-s-at-mugford-using-the-provided-business-information-exactly-as-written-name-address-phone-price-range-hours-service-options-dog-friendly-rating-review-count",
+      "featureTitle": "Create a mobile-first, single-page marketing website for the coffee shop “Mookie’s at Mugford” using the provided business information exactly as written (name, address, phone, price range, hours, service options, dog friendly, rating/review count).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/mookies/businessInfo.ts",
+        "frontend/src/components/mookies/sections/AboutSection.tsx",
+        "frontend/src/components/mookies/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-specified-page-structure-and-content-sections-in-this-order-1-hero-with-headline-your-favorite-local-coffee-spot-subheadline-about-coffee-pastries-friendly-vibes-ctas-view-menu-and-order-online-and-visible-4-9-rating-2-about-mookie-s-warm-casual-story-mentioning-community-feel-and-dog-friendly-3-menu-highlights-as-clean-cards-with-photos-for-avocado-toast-cinnamon-roll-variety-of-pastries-ham-egg-cheese-egg-cheddar-lattes-espresso-drinks-plus-a-view-full-menu-button-4-why-people-love-it-social-proof-style-bullets-5-reviews-section-with-the-three-provided-quotes-5-star-display-and-total-review-count-108-6-visit-us-with-address-embedded-map-hours-clickable-phone-number-and-get-directions-button-7-footer-with-name-logo-address-phone-hours-and-social-icons-instagram-vibe",
+      "featureTitle": "Implement the specified page structure and content sections in this order: (1) Hero with headline “Your Favorite Local Coffee Spot.”, subheadline about coffee/pastries/friendly vibes, CTAs “View Menu” and “Order Online”, and visible ⭐ 4.9 rating; (2) About Mookie’s (warm, casual story mentioning community feel and dog-friendly); (3) Menu Highlights as clean cards with photos for Avocado Toast, Cinnamon Roll, Variety of Pastries, Ham, Egg & Cheese, Egg & Cheddar, Lattes & Espresso Drinks plus a “View Full Menu” button; (4) “Why People Love It” social-proof style bullets; (5) Reviews section with the three provided quotes, 5-star display, and total review count 108; (6) Visit Us with address, embedded map, hours, clickable phone number, and “Get Directions” button; (7) Footer with name/logo, address, phone, hours, and social icons (Instagram vibe).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/mookies/assets.ts",
+        "frontend/src/components/mookies/sections/FooterSection.tsx",
+        "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx",
+        "frontend/src/components/mookies/sections/ReviewsSection.tsx",
+        "frontend/src/components/mookies/sections/VisitUsSection.tsx",
+        "frontend/src/components/mookies/sections/WhyPeopleLoveItSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-wire-cta-behaviors-with-smooth-scrolling-and-sensible-fallbacks-view-menu-scrolls-to-menu-highlights-view-full-menu-scrolls-to-menu-highlights-and-or-expands-an-in-page-full-menu-area-if-implemented-without-navigating-away-get-directions-opens-a-maps-directions-url-targeting-114-washington-st-marblehead-ma-01945-order-online-opens-an-in-page-modal-or-section-explaining-online-ordering-is-not-available-yet-and-offers-the-clickable-phone-number-to-order-by-call",
+      "featureTitle": "Wire CTA behaviors with smooth scrolling and sensible fallbacks: “View Menu” scrolls to Menu Highlights; “View Full Menu” scrolls to Menu Highlights and/or expands an in-page full menu area (if implemented) without navigating away; “Get Directions” opens a maps directions URL targeting “114 Washington St, Marblehead, MA 01945”; “Order Online” opens an in-page modal or section explaining online ordering is not available yet and offers the clickable phone number to order by call.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/mookies/OrderOnlineDialog.tsx",
+        "frontend/src/components/mookies/sections/HeroSection.tsx",
+        "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx",
+        "frontend/src/components/mookies/sections/VisitUsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-the-requested-brand-vibe-and-ux-polish-across-the-page-warm-cozy-modern-caf-aesthetic-soft-neutrals-with-accent-colors-espresso-brown-cream-muted-green-subtle-animations-and-soft-shadows-smooth-scrolling-clean-sans-serif-typography-no-clutter-and-no-pop-ups",
+      "featureTitle": "Apply the requested brand vibe and UX polish across the page: warm cozy modern café aesthetic; soft neutrals with accent colors espresso brown, cream, muted green; subtle animations and soft shadows; smooth scrolling; clean sans-serif typography; no clutter and no pop-ups.",
+      "files": [
+        "frontend/src/components/mookies/animations/useRevealOnScroll.ts",
+        "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-basic-local-seo-for-mookie-s-at-mugford-and-coffee-searches-set-page-title-description-open-graph-twitter-meta-tags-semantic-headings-and-localbusiness-json-ld-including-name-address-phone-price-range-hours-as-provided-and-rating-review-count",
+      "featureTitle": "Implement basic local SEO for “Mookie’s at Mugford” and coffee searches: set page title/description, Open Graph/Twitter meta tags, semantic headings, and LocalBusiness JSON-LD including name, address, phone, price range, hours (as provided), and rating/review count.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/mookies/assets.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-performance-and-accessibility-optimize-images-proper-sizing-and-modern-formats-lazy-load-below-the-fold-images-ensure-sufficient-color-contrast-provide-alt-text-for-all-images-and-keep-the-site-fast-loading",
+      "featureTitle": "Ensure performance and accessibility: optimize images (proper sizing and modern formats), lazy-load below-the-fold images, ensure sufficient color contrast, provide alt text for all images, and keep the site fast-loading.",
+      "files": [
+        "frontend/src/components/mookies/OrderOnlineDialog.tsx",
+        "frontend/src/components/mookies/sections/FooterSection.tsx",
+        "frontend/src/components/mookies/sections/HeroSection.tsx",
+        "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-and-use-generated-static-image-assets-by-placing-them-in-frontend-public-assets-generated-and-referencing-them-directly-from-the-frontend-do-not-serve-images-via-the-backend",
+      "featureTitle": "Add and use generated static image assets by placing them in frontend/public/assets/generated and referencing them directly from the frontend (do not serve images via the backend).",
+      "files": [
+        "frontend/src/components/mookies/assets.ts",
+        "frontend/src/components/mookies/sections/HeroSection.tsx",
+        "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

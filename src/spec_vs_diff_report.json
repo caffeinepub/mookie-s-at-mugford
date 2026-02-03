@@ -1,0 +1,87 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-03T20:47:27.074Z",
+  "summary": "The diff implements a single-page marketing layout with the requested major sections (Hero, About, Menu Highlights, Why People Love It, Reviews, Visit Us, Footer), smooth-scroll for “View Menu”, an “Order Online” user-triggered dialog, and card-based menu highlights using static asset paths with alt text and lazy-loading. However, some required business info is not shown on the page, the phone link format does not match the specified tel:(781) 990-3282 requirement, the footer does not include the requested logo, and Internet Identity/auth plumbing is actively wired despite the constraint that it remain unused unless requested.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "All provided business information strings (including price range and service options) must appear exactly as provided.",
+      "reason": "The page components shown render address/phone/hours/rating, but there is no display of price range ($1–10 per person) or service options (Dine-in, Takeout).",
+      "evidence": [
+        "frontend/src/components/mookies/businessInfo.ts",
+        "frontend/src/components/mookies/sections/HeroSection.tsx",
+        "frontend/src/components/mookies/sections/VisitUsSection.tsx",
+        "frontend/src/components/mookies/sections/FooterSection.tsx"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "requirement": "Footer must include name/logo, address, phone, hours, and social icons.",
+      "reason": "Footer shows the business name as text plus address/phone/hours and an Instagram icon, but no logo image is rendered in the footer.",
+      "evidence": [
+        "frontend/src/components/mookies/sections/FooterSection.tsx"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "requirement": "Visit Us section must include a clickable phone link using tel:(781) 990-3282.",
+      "reason": "The implementation uses phoneLink \"tel:+17819903282\" rather than the specified tel:(781) 990-3282 format.",
+      "evidence": [
+        "frontend/src/components/mookies/businessInfo.ts",
+        "frontend/src/components/mookies/sections/VisitUsSection.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Internet Identity is actively wired into the app (provider mounted; actor hook depends on identity), despite the constraint that Internet Identity hooks remain unused unless explicitly requested.",
+      "reason": "The BuildRequest explicitly says Internet Identity hooks remain unused unless requested later, but main.tsx wraps the app with InternetIdentityProvider and a useActor hook is present using useInternetIdentity.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useInternetIdentity.ts"
+      ]
+    },
+    {
+      "description": "Hardcoded Google Maps Embed API key in the Visit Us map iframe URL.",
+      "reason": "The BuildRequest asked for an embedded map but did not request embedding via an API key or adding a specific key in source.",
+      "evidence": [
+        "frontend/src/components/mookies/sections/VisitUsSection.tsx"
+      ]
+    },
+    {
+      "description": "Footer attribution link to caffeine.ai.",
+      "reason": "Not requested in requirements (footer requirements were name/logo, address, phone, hours, social icons).",
+      "evidence": [
+        "frontend/src/components/mookies/sections/FooterSection.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/mookies/OrderOnlineDialog.tsx",
+    "frontend/src/components/mookies/animations/useRevealOnScroll.ts",
+    "frontend/src/components/mookies/assets.ts",
+    "frontend/src/components/mookies/businessInfo.ts",
+    "frontend/src/components/mookies/sections/AboutSection.tsx",
+    "frontend/src/components/mookies/sections/FooterSection.tsx",
+    "frontend/src/components/mookies/sections/HeroSection.tsx",
+    "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx",
+    "frontend/src/components/mookies/sections/ReviewsSection.tsx",
+    "frontend/src/components/mookies/sections/VisitUsSection.tsx",
+    "frontend/src/components/mookies/sections/WhyPeopleLoveItSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

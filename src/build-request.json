@@ -1,0 +1,182 @@
+{
+  "kind": "build_request",
+  "title": "Marketing website for Mookie’s at Mugford (cozy modern café landing page)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a mobile-first, single-page marketing website for the coffee shop “Mookie’s at Mugford” using the provided business information exactly as written (name, address, phone, price range, hours, service options, dog friendly, rating/review count).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Build a **super clean, modern, visually irresistible website** for a coffee shop called **Mookie’s at Mugford**.",
+          "## ☕ BUSINESS INFO (USE EXACTLY)"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The landing page renders as a single scrollable page with clearly separated sections.",
+        "All business info strings appear exactly as provided (including punctuation like “Open · Closes 3 PM” and “⭐ 4.9 (108 reviews)”).",
+        "Layout is responsive and readable on mobile, tablet, and desktop."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the specified page structure and content sections in this order: (1) Hero with headline “Your Favorite Local Coffee Spot.”, subheadline about coffee/pastries/friendly vibes, CTAs “View Menu” and “Order Online”, and visible ⭐ 4.9 rating; (2) About Mookie’s (warm, casual story mentioning community feel and dog-friendly); (3) Menu Highlights as clean cards with photos for Avocado Toast, Cinnamon Roll, Variety of Pastries, Ham, Egg & Cheese, Egg & Cheddar, Lattes & Espresso Drinks plus a “View Full Menu” button; (4) “Why People Love It” social-proof style bullets; (5) Reviews section with the three provided quotes, 5-star display, and total review count 108; (6) Visit Us with address, embedded map, hours, clickable phone number, and “Get Directions” button; (7) Footer with name/logo, address, phone, hours, and social icons (Instagram vibe).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "## 🏠 WEBSITE STRUCTURE",
+          "### 1. HERO SECTION",
+          "### 2. ABOUT MOOKIE’S",
+          "### 3. MENU HIGHLIGHTS",
+          "### 4. WHY PEOPLE LOVE IT",
+          "### 5. REVIEWS SECTION",
+          "### 6. VISIT US",
+          "### 7. FOOTER"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each section exists with the required headings/copy and is reachable by scrolling.",
+        "Hero shows the rating near the headline area and includes both CTAs.",
+        "Menu highlight items are displayed as cards and each card includes an image.",
+        "Reviews section shows the three quotes exactly as provided and displays 108 review count.",
+        "Visit Us includes an interactive map embed and a clickable phone link using tel:(781) 990-3282.",
+        "Footer includes social icons styled consistently (links may be placeholders if no URLs are provided)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Wire CTA behaviors with smooth scrolling and sensible fallbacks: “View Menu” scrolls to Menu Highlights; “View Full Menu” scrolls to Menu Highlights and/or expands an in-page full menu area (if implemented) without navigating away; “Get Directions” opens a maps directions URL targeting “114 Washington St, Marblehead, MA 01945”; “Order Online” opens an in-page modal or section explaining online ordering is not available yet and offers the clickable phone number to order by call.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "CTA buttons: * **View Menu** * **Order Online**",
+          "Button: **View Full Menu**",
+          "Button: **Get Directions**"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking “View Menu” smoothly scrolls to the menu section.",
+        "Clicking “Get Directions” opens a new tab with directions for the exact address.",
+        "Clicking “Order Online” does not dead-end; it shows a modal/section with a clear next action (call link).",
+        "All interactive elements have accessible focus styles and keyboard support."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Apply the requested brand vibe and UX polish across the page: warm cozy modern café aesthetic; soft neutrals with accent colors espresso brown, cream, muted green; subtle animations and soft shadows; smooth scrolling; clean sans-serif typography; no clutter and no pop-ups.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "## 🎨 BRAND VIBE & DESIGN",
+          "* Warm, cozy, modern café aesthetic",
+          "* Accent colors: espresso brown, cream, muted green",
+          "* Smooth scroll, subtle animations, soft shadows",
+          "## 📱 TECH REQUIREMENTS",
+          "* Clean sans-serif fonts",
+          "* No clutter, no pop-ups"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Visual styling matches the described palette and cozy café feel (neutrals + espresso/cream/muted green accents).",
+        "Animations are subtle (e.g., gentle fade/slide on scroll, hover elevation) and do not block interaction.",
+        "No modal dialogs appear automatically; the only modal allowed is user-triggered (e.g., Order Online).",
+        "Typography uses a clean sans-serif throughout with consistent spacing and hierarchy."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement basic local SEO for “Mookie’s at Mugford” and coffee searches: set page title/description, Open Graph/Twitter meta tags, semantic headings, and LocalBusiness JSON-LD including name, address, phone, price range, hours (as provided), and rating/review count.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "* SEO optimized for local coffee searches"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The document has a relevant <title> and meta description containing “Mookie’s at Mugford” and “Marblehead, MA”.",
+        "Open Graph meta tags are present (title, description, image, url).",
+        "A JSON-LD script for a LocalBusiness (or CafeOrCoffeeShop) is included with the provided business fields.",
+        "Headings use a single H1 and logical H2/H3 structure for sections."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Ensure performance and accessibility: optimize images (proper sizing and modern formats), lazy-load below-the-fold images, ensure sufficient color contrast, provide alt text for all images, and keep the site fast-loading.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "* Mobile-first",
+          "* Fast loading"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All images have non-empty alt text appropriate to the visual content.",
+        "Below-the-fold images are lazy-loaded.",
+        "Largest hero image is compressed and sized appropriately for common viewports.",
+        "Keyboard navigation works for CTAs, links, and any modal; focus is trapped in modal while open and returns on close."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add and use generated static image assets by placing them in frontend/public/assets/generated and referencing them directly from the frontend (do not serve images via the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Big cozy coffee imagery (lattes, pastries, sunlight through windows)",
+          "Use clean cards with photos"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All required generated images exist under frontend/public/assets/generated with the specified filenames.",
+        "Hero and menu cards render using these static assets without backend calls.",
+        "Build succeeds with correct asset paths and no missing image errors."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use English for all user-facing website copy.",
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Do not add third-party authentication; Internet Identity hooks remain unused unless explicitly requested later.",
+    "Keep backend as a single Motoko actor; no additional backend services or external databases."
+  ],
+  "nonGoals": [
+    "Implementing a real online ordering/payment workflow (no Stripe or third-party ordering integrations unless explicitly requested later).",
+    "Collecting user accounts, logins, or personalization.",
+    "A multi-page CMS or admin dashboard for editing menu content."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Cozy café hero photo with latte art, pastries, and warm natural light through windows (mookies-hero.dim_2400x1350.png)",
+      "Minimal wordmark logo reading “Mookie’s at Mugford” in a clean, modern sans-serif with subtle handcrafted feel; transparent background (mookies-logo.dim_1200x400.png)",
+      "Menu item photo: avocado toast on rustic plate, warm café lighting (menu-avocado-toast.dim_1200x900.png)",
+      "Menu item photo: cinnamon roll with icing, cozy morning light (menu-cinnamon-roll.dim_1200x900.png)",
+      "Menu item photo: assorted pastries display, wood textures, soft neutrals (menu-pastries.dim_1200x900.png)",
+      "Menu item photo: ham egg and cheese breakfast sandwich, café setting (menu-ham-egg-cheese.dim_1200x900.png)",
+      "Menu item photo: egg and cheddar breakfast sandwich, cozy neutral backdrop (menu-egg-cheddar.dim_1200x900.png)",
+      "Menu item photo: lattes and espresso drinks on wooden table with muted green accent (menu-lattes-espresso.dim_1200x900.png)"
+    ],
+    "edits": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "frontend/src/App.tsx": "Main application component that composes all page sections in order (Hero, About, Menu, Why People Love It, Reviews, Visit Us, Footer) for the single-page Mookie's at Mugford coffee shop website.",
+  "frontend/src/components/mookies/businessInfo.ts": "Centralized constants module containing all exact business information (name, address, phone, hours, rating, etc.) as a single source of truth to prevent copy drift across components.",
+  "frontend/src/components/mookies/assets.ts": "Asset path constants and menu item data structure mapping all generated static images to their paths and providing menu item metadata (names, images, alt text).",
+  "frontend/src/components/mookies/sections/HeroSection.tsx": "Full-screen hero section with background image, logo, headline \"Your Favorite Local Coffee Spot\", rating display, and CTAs for \"View Menu\" (smooth scroll) and \"Order Online\" (opens dialog), now with corrected imports separating BUSINESS_INFO and ASSETS.",
+  "frontend/src/components/mookies/sections/AboutSection.tsx": "About section with welcoming story emphasizing community, quality, and dog-friendly atmosphere, featuring three icon-based highlights (Quality Coffee, Made with Love, Community First).",
+  "frontend/src/components/mookies/sections/MenuHighlightsSection.tsx": "Menu section displaying six menu items as cards with images and hover effects, includes \"View Full Menu\" CTA and uses reveal-on-scroll animations.",
+  "frontend/src/components/mookies/sections/WhyPeopleLoveItSection.tsx": "Social proof section displaying five key reasons customers love Mookie's (dog friendly, quality, friendly staff, cozy atmosphere, great service) with icons.",
+  "frontend/src/components/mookies/sections/ReviewsSection.tsx": "Reviews section showing 5-star rating, total review count (108), and three customer testimonial cards with exact quotes as provided.",
+  "frontend/src/components/mookies/sections/VisitUsSection.tsx": "Visit section with address, hours, clickable phone link, \"Get Directions\" button, and embedded Google Maps iframe showing the café location.",
+  "frontend/src/components/mookies/sections/FooterSection.tsx": "Footer with brand name, contact information, hours, Instagram social icon, and attribution (\"Built with ❤️ using caffeine.ai\").",
+  "frontend/src/components/mookies/OrderOnlineDialog.tsx": "Modal dialog component explaining online ordering is coming soon and providing a prominent call-to-order button with the phone number.",
+  "frontend/src/components/mookies/animations/useRevealOnScroll.ts": "Custom React hook using IntersectionObserver to trigger reveal animations when elements scroll into viewport, respecting reduced motion preferences.",
+  "frontend/src/index.css": "Global styles defining the warm café color palette (espresso brown, cream, muted green) in OKLCH format for both light and dark modes, with smooth scrolling and accessibility features.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme with custom café color tokens (espresso, cream, muted-green), Inter font family, custom shadows, and animation utilities.",
+  "frontend/index.html": "HTML entry point with SEO meta tags (title, description, Open Graph, Twitter Card), JSON-LD structured data for LocalBusiness/CafeOrCoffeeShop, and Inter font preload."
+}

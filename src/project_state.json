@@ -1,0 +1,149 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a cozy, modern, mobile-first marketing website for the coffee shop “Mookie’s at Mugford” with specific sections (hero, about, menu highlights, social proof, reviews, visit/map, footer), local SEO, and subtle animations.",
+  "existing_features": [
+    {
+      "id": "feature-create-a-mobile-first-single-page-marketing-website-for-the-coffee-shop-mookie-s-at-mugford-using-the-provided-business-information-exactly-as-written-name-address-phone-price-range-hours-service-options-dog-friendly-rating-review-count",
+      "title": "Create a mobile-first, single-page marketing website for the coffee shop “Mookie’s at Mugford” using the provided business information exactly as written (name, address, phone, price range, hours, service options, dog friendly, rating/review count).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-specified-page-structure-and-content-sections-in-this-order-1-hero-with-headline-your-favorite-local-coffee-spot-subheadline-about-coffee-pastries-friendly-vibes-ctas-view-menu-and-order-online-and-visible-4-9-rating-2-about-mookie-s-warm-casual-story-mentioning-community-feel-and-dog-friendly-3-menu-highlights-as-clean-cards-with-photos-for-avocado-toast-cinnamon-roll-variety-of-pastries-ham-egg-cheese-egg-cheddar-lattes-espresso-drinks-plus-a-view-full-menu-button-4-why-people-love-it-social-proof-style-bullets-5-reviews-section-with-the-three-provided-quotes-5-star-display-and-total-review-count-108-6-visit-us-with-address-embedded-map-hours-clickable-phone-number-and-get-directions-button-7-footer-with-name-logo-address-phone-hours-and-social-icons-instagram-vibe",
+      "title": "Implement the specified page structure and content sections in this order: (1) Hero with headline “Your Favorite Local Coffee Spot.”, subheadline about coffee/pastries/friendly vibes, CTAs “View Menu” and “Order Online”, and visible ⭐ 4.9 rating; (2) About Mookie’s (warm, casual story mentioning community feel and dog-friendly); (3) Menu Highlights as clean cards with photos for Avocado Toast, Cinnamon Roll, Variety of Pastries, Ham, Egg & Cheese, Egg & Cheddar, Lattes & Espresso Drinks plus a “View Full Menu” button; (4) “Why People Love It” social-proof style bullets; (5) Reviews section with the three provided quotes, 5-star display, and total review count 108; (6) Visit Us with address, embedded map, hours, clickable phone number, and “Get Directions” button; (7) Footer with name/logo, address, phone, hours, and social icons (Instagram vibe).",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-wire-cta-behaviors-with-smooth-scrolling-and-sensible-fallbacks-view-menu-scrolls-to-menu-highlights-view-full-menu-scrolls-to-menu-highlights-and-or-expands-an-in-page-full-menu-area-if-implemented-without-navigating-away-get-directions-opens-a-maps-directions-url-targeting-114-washington-st-marblehead-ma-01945-order-online-opens-an-in-page-modal-or-section-explaining-online-ordering-is-not-available-yet-and-offers-the-clickable-phone-number-to-order-by-call",
+      "title": "Wire CTA behaviors with smooth scrolling and sensible fallbacks: “View Menu” scrolls to Menu Highlights; “View Full Menu” scrolls to Menu Highlights and/or expands an in-page full menu area (if implemented) without navigating away; “Get Directions” opens a maps directions URL targeting “114 Washington St, Marblehead, MA 01945”; “Order Online” opens an in-page modal or section explaining online ordering is not available yet and offers the clickable phone number to order by call.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-the-requested-brand-vibe-and-ux-polish-across-the-page-warm-cozy-modern-caf-aesthetic-soft-neutrals-with-accent-colors-espresso-brown-cream-muted-green-subtle-animations-and-soft-shadows-smooth-scrolling-clean-sans-serif-typography-no-clutter-and-no-pop-ups",
+      "title": "Apply the requested brand vibe and UX polish across the page: warm cozy modern café aesthetic; soft neutrals with accent colors espresso brown, cream, muted green; subtle animations and soft shadows; smooth scrolling; clean sans-serif typography; no clutter and no pop-ups.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-basic-local-seo-for-mookie-s-at-mugford-and-coffee-searches-set-page-title-description-open-graph-twitter-meta-tags-semantic-headings-and-localbusiness-json-ld-including-name-address-phone-price-range-hours-as-provided-and-rating-review-count",
+      "title": "Implement basic local SEO for “Mookie’s at Mugford” and coffee searches: set page title/description, Open Graph/Twitter meta tags, semantic headings, and LocalBusiness JSON-LD including name, address, phone, price range, hours (as provided), and rating/review count.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-performance-and-accessibility-optimize-images-proper-sizing-and-modern-formats-lazy-load-below-the-fold-images-ensure-sufficient-color-contrast-provide-alt-text-for-all-images-and-keep-the-site-fast-loading",
+      "title": "Ensure performance and accessibility: optimize images (proper sizing and modern formats), lazy-load below-the-fold images, ensure sufficient color contrast, provide alt text for all images, and keep the site fast-loading.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-and-use-generated-static-image-assets-by-placing-them-in-frontend-public-assets-generated-and-referencing-them-directly-from-the-frontend-do-not-serve-images-via-the-backend",
+      "title": "Add and use generated static image assets by placing them in frontend/public/assets/generated and referencing them directly from the frontend (do not serve images via the backend).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create marketing website for Mookie’s at Mugford (cozy modern café aesthetic) using provided business info",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement page structure/sections: Hero w/ CTAs + rating, About, Menu Highlights, Why People Love It, Reviews, Visit Us (map/hours/phone), Footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add UX/tech requirements: mobile-first, fast loading, smooth scroll/subtle animations, clean sans-serif, no pop-ups/clutter",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add local SEO optimization for coffee searches and clickable contact/actions (call, directions, order online, view menu)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "architecturalNotes": [],
+  "knownIssues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Cozy café hero photo with latte art, pastries, and warm natural light through windows (mookies-hero.dim_2400x1350.png)\n- Minimal wordmark logo reading “Mookie’s at Mugford” in a clean, modern sans-serif with subtle handcrafted feel; transparent background (mookies-logo.dim_1200x400.png)\n- Menu item photo: avocado toast on rustic plate, warm café lighting (menu-avocado-toast.dim_1200x900.png)\n- Menu item photo: cinnamon roll with icing, cozy morning light (menu-cinnamon-roll.dim_1200x900.png)\n- Menu item photo: assorted pastries display, wood textures, soft neutrals (menu-pastries.dim_1200x900.png)\n- Menu item photo: ham egg and cheese breakfast sandwich, café setting (menu-ham-egg-cheese.dim_1200x900.png)\n- Menu item photo: egg and cheddar breakfast sandwich, cozy neutral backdrop (menu-egg-cheddar.dim_1200x900.png)\n- Menu item photo: lattes and espresso drinks on wooden table with muted green accent (menu-lattes-espresso.dim_1200x900.png)",
+  "generatedImages": [
+    {
+      "filename": "mookies-hero.dim_2400x1350.png",
+      "description": "Cozy café hero photo with latte art, pastries, and warm natural light through windows",
+      "targetWidth": 2400,
+      "targetHeight": 1350
+    },
+    {
+      "filename": "mookies-logo.dim_1200x400.png",
+      "description": "Minimal wordmark logo reading “Mookie’s at Mugford” in a clean, modern sans-serif with subtle handcrafted feel; transparent background",
+      "targetWidth": 1200,
+      "targetHeight": 400
+    },
+    {
+      "filename": "menu-avocado-toast.dim_1200x900.png",
+      "description": "Menu item photo: avocado toast on rustic plate, warm café lighting",
+      "targetWidth": 1200,
+      "targetHeight": 900
+    },
+    {
+      "filename": "menu-cinnamon-roll.dim_1200x900.png",
+      "description": "Menu item photo: cinnamon roll with icing, cozy morning light",
+      "targetWidth": 1200,
+      "targetHeight": 900
+    },
+    {
+      "filename": "menu-pastries.dim_1200x900.png",
+      "description": "Menu item photo: assorted pastries display, wood textures, soft neutrals",
+      "targetWidth": 1200,
+      "targetHeight": 900
+    },
+    {
+      "filename": "menu-ham-egg-cheese.dim_1200x900.png",
+      "description": "Menu item photo: ham egg and cheese breakfast sandwich, café setting",
+      "targetWidth": 1200,
+      "targetHeight": 900
+    },
+    {
+      "filename": "menu-egg-cheddar.dim_1200x900.png",
+      "description": "Menu item photo: egg and cheddar breakfast sandwich, cozy neutral backdrop",
+      "targetWidth": 1200,
+      "targetHeight": 900
+    },
+    {
+      "filename": "menu-lattes-espresso.dim_1200x900.png",
+      "description": "Menu item photo: lattes and espresso drinks on wooden table with muted green accent",
+      "targetWidth": 1200,
+      "targetHeight": 900
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Mookie’s at Mugford",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0,
+  "requiresBackendChanges": false,
+  "requiresFrontendChanges": true
+}
